@@ -1,13 +1,31 @@
-Finish this challenge and use the result as password for 'zaz' user.
-SLASH
-Slash
-slash
+# Boot2Root 
 
-Python 3.13.3 (main, Apr 10 2025, 21:38:51) [GCC 14.2.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> import hashlib
->>> hashlib.md5(b"SLASH").digest()
-b'dm\xa6q\xca\x01\xbb]\x84\xdb\xb5\xfb"8\xdc\x8e'
->>> hashlib.md5(b"SLASH").hexdigest()
-'646da671ca01bb5d84dbb5fb2238dc8e'
->>
+## Overview
+
+This repository contains detailed writeups for the Boot2Root machine. The objective is to gain root access by exploiting system vulnerabilities and privilege escalation techniques.
+
+The project includes:
+- 🛠️ **Mandatory Writeups (2):**  
+  - The first method follows an intended path through the machine, moving from user to user by carefully enumerating and exploiting accessible resources. The final privilege escalation is achieved by exploiting a buffer overflow in a file named exploit_me found in the last user
+  - Exploits the Dirty COW (CVE-0000-0000) kernel vulnerability to gain root access directly by leveraging a local privilege escalation exploit.
+
+- 🎯 **Bonus Writeups (3):**  
+  - Cron job privilege escalation
+  - 
+  - 
+
+---
+
+## Contents
+- ✅ `writeup1.md` – 
+- ✅ `writeup2.md` – 
+- ⭐ `bonus1.md` – Cron job privilege escalation
+- ⭐ `bonus2.md` – 
+- ⭐ `bonus3.md` –   
+
+---
+The scripts folder contains all the scripts and tools used during the exploitation process.
+
+## Purpose
+
+This project documents our penetration testing process and provides educational material for cybersecurity enthusiasts aiming to improve their exploitation and privilege escalation skills.
