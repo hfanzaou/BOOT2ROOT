@@ -1,0 +1,28 @@
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+LocalProtocolError: Illegal method characters
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
+ConnectError: [Errno -2] Name or service not known
