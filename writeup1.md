@@ -71,7 +71,8 @@ Among these, SSH, FTP, HTTP, and HTTPS were of particular interest.
     Further probing for possible subdomains on the HTTPS server uncovered several interesting web services:
     we use dirb tool for that:
 > dirb https://192.168.56.101/
-output of dirb    
+
+output :
 ```
 
 -----------------
@@ -92,14 +93,14 @@ GENERATED WORDS: 4612
 ==> DIRECTORY: https://192.168.56.101/forum/                                   
 ==> DIRECTORY: https://192.168.56.101/phpmyadmin/                              
 + https://192.168.56.101/server-status (CODE:403|SIZE:296)                     
-==> DIRECTORY: https://192.168.56.101/webmail/  ```
+==> DIRECTORY: https://192.168.56.101/webmail/ 
+```
 
-    - Forum — a discussion board containing posts and user data.
-    - phpMyAdmin — a web-based MySQL administration interface.
-    - Webmailer — a webmail client interface.
+- Forum — a discussion board containing posts and user data.
+- phpMyAdmin — a web-based MySQL administration interface.
+- Webmailer — a webmail client interface.
 
-
-    The forum was functional and allowed user logins, providing a potential entry point for further exploration.
+The forum was functional and allowed user logins, providing a potential entry point for further exploration.
 ## 🔍 Forum and Credential Harvesting
 ### 📑 Forum Access
 - Inside the forum, I found a post titled “Login problems” which contained logs of failed login attempts by a user named lmezard.
