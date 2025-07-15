@@ -19,9 +19,8 @@ The project includes:
 ## Contents
 - ✅ `writeup1.md` – 
 - ✅ `writeup2.md` – 
-- ⭐ `bonus1.md` – Cron job privilege escalation
-- ⭐ `bonus2.md` – 
-- ⭐ `bonus3.md` –   
+- ✅ `bonus/writeup3.md` – 
+- ✅ `bonus/writeup4.md` – 
 
 ---
 The scripts folder contains all the scripts and tools used during the exploitation process.

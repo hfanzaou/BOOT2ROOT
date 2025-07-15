@@ -219,7 +219,7 @@ Upon successfully logging in as laurie, I conducted an initial enumeration of th
     - 0 q 777
     - fibonacci 9
     - opekmq
-    - 4
+    - 426135
     ```
     Combining these passcodes to form the SSH password for the user thor.
 - ### 🎯 Result
@@ -397,7 +397,7 @@ Again after successfully logging in as thor, I conducted an initial enumeration 
         "Can you digest the message? :)"
 - ### 🛠️ Solution Approach
     The challenge suggests parsing the instructions and drawing them using the Python turtle module to reveal a hidden message that will serve as the password for the zaz user.
-    ![Turtle Result](Screenshot.png)
+    ![Turtle Result](srcs/Screenshot.png)
     so the word here is "SLASH", we have to hash it with md5 before using it as password for zaz.
     ```
         Python 3
