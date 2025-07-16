@@ -220,8 +220,36 @@ Upon successfully logging in as laurie, I conducted an initial enumeration of th
     - 0 q 777
     - fibonacci 9
     - opekmq
-    - 426135
+    - 4 2 6 1 3 5
     ```
+b *0x08048e70
+b *0x08048e60
+0x08048dca
+set $node = *(int *)0x804b26c
+set $count = 0
+while $node != 0 && $count < 6
+  printf "Node @ %p, value = %d\n", $node, *(int *)$node
+  set $node = *(int *)($node + 8)
+  set $count = $count + 1
+end
+    #### for phase_5 we used gdb to find the comaparizon array
+    steps:
+    ```
+    gdb ./bomb
+    b main
+    disass main
+    b phase_5
+    disass phase_5
+    # This loads the base address of the lookup table (array_123) into register %esi.
+    mov $0x804b220, %esi
+    # to print the array content
+    x/16cb 0x804b220
+    ```
+    this gives us the array:
+    "maduiersnfotvbyl"
+
+    #### for phase_6 we used gdb to find the cotent of the linked list
+
     Combining these passcodes to form the SSH password for the user thor.
 - ### 🎯 Result
     > Publicspeakingisveryeasy.126241207201b2149opekmq426135
