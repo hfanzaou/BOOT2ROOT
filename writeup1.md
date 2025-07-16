@@ -246,7 +246,7 @@ end
     x/16cb 0x804b220
     ```
     this gives us the array:
-    "maduiersnfotvbyl"
+    "isrveawhobpnutfg"
 
     #### for phase_6 we used gdb to find the cotent of the linked list
 
