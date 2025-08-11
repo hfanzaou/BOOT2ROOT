@@ -9,10 +9,6 @@ The project includes:
   - The first method follows an intended path through the machine, moving from user to user by carefully enumerating and exploiting accessible resources. The final privilege escalation is achieved by exploiting a buffer overflow in a file named exploit_me found in the last user
   - Exploits the Dirty COW (CVE-0000-0000) kernel vulnerability to gain root access directly by leveraging a local privilege escalation exploit.
 
-- 🎯 **Bonus Writeups (3):**  
-  - Cron job privilege escalation
-  - 
-  - 
 
 ---
 
