@@ -1,4 +1,5 @@
-# Boot2Root 
+<h1 align="center"> Boot2Root </h1>
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHJmaXFwNnF2OW9sejkyc292NnVlbGoxdDJuZnNnNW14MjVjMDVydiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wDaPGTLstdQFq/giphy.gif" alt="bob" title="gif" width="900" />
 This repository contains detailed writeups for the Boot2Root machine. The objective is to gain root access by exploiting system vulnerabilities and privilege escalation techniques.
 
 The project includes:
